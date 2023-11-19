@@ -1,5 +1,6 @@
 import storyline from "./content/storyline.json";
 import React, { useEffect, useState } from "react";
+import { isMobile } from "react-device-detect";
 
 export default function Normal({
   currentStep,
@@ -48,7 +49,9 @@ export default function Normal({
                 setClickableObjectText(""),
                 setLoadMainText("")
               )}
-              onMouseEnter={() => setClickableObjectText(object.text)}
+              onMouseEnter={
+                isMobile ? () => false : setClickableObjectText(object.text)
+              }
               onMouseLeave={() => setClickableObjectText("")}
             >
               <img
