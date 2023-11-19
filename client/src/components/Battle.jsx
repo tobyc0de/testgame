@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function Battle({
+  currentStep,
   setCurrentStep,
   currentStepData,
   player,
@@ -117,31 +118,37 @@ export default function Battle({
     <div id="battlescreen">
       <img
         id="background"
-        src={`/img/${currentStepData.id}.webp`}
+        src={`/img/backgrounds/${currentStep}.webp`}
         alt="background"
       />
-      <p>You VS. {currentStepData.opponent}</p>
+      <div id="battleVS">
+        You <span style={{ color: "red" }}> VS.</span>{" "}
+        {currentStepData.opponent}
+      </div>
+
       <div id="playerDetails">
-        <ul>
-          <li>Health: {player.attributes.health}</li>
-          <li>Strength: {player.attributes.strength}</li>
-          <li>Dexterity: {player.attributes.dexterity}</li>
-          <li>Intelligence: {player.attributes.intelligence}</li>
-          <li>Charisma: {player.attributes.intelligence}</li>
-        </ul>
+        <img src="/img/opponents/you.webp" alt="you" />
       </div>
       <div id="opponentDetails">
-        <ul>
-          <li>Health: {opponentAttributes.health}</li>
-          <li>Strength: {opponentAttributes.strength}</li>
-          <li>Dexterity: {opponentAttributes.dexterity}</li>
+        <img
+          src={`/img/opponents/${currentStepData.opponentImage}`}
+          alt="the other guy"
+        />
+
+        <ul id="battleLabels">
           <li>
-            Intelligence:
-            {opponentAttributes.intelligence}
+            {player.attributes.health} Health {opponentAttributes.health}
           </li>
           <li>
-            Friendliness:
-            {opponentAttributes.friendliness}
+            {player.attributes.strength} Strength {opponentAttributes.strength}
+          </li>
+          <li>
+            {player.attributes.dexterity} Dexterity{" "}
+            {opponentAttributes.dexterity}
+          </li>
+          <li>
+            {player.attributes.intelligence} Intelligence{" "}
+            {opponentAttributes.intelligence}
           </li>
         </ul>
       </div>

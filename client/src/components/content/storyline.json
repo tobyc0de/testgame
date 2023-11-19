@@ -106,8 +106,8 @@
       },
       {
         "name": "ring",
-        "text": "Should I watch the fight?",
-        "target": 0,
+        "text": "Should I fight?",
+        "target": 4,
         "positionX": 44.2,
         "positionY": 37.7,
         "width": 10.6,
@@ -119,7 +119,7 @@
   {
     "id": 4,
     "type": "battle",
-    "opponent": "BlablaOpponent",
+    "opponent": "Weird Winfried",
     "opponentAttributes": {
       "health": 10,
       "strength": 5,
@@ -127,7 +127,7 @@
       "intelligence": 8,
       "friendliness": 4
     },
-    "opponentImage": "Blablaopponent.webp",
+    "opponentImage": "4_1.webp",
     "nextStep": 69
   },
   {

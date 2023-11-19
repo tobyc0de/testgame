@@ -12,6 +12,8 @@ body {
   height: 100vh;
 }
 
+/* NORMAL SCENES */
+
 .clickableObject {
   text-align: center;
   color: white;
@@ -103,4 +105,69 @@ iteration-count | direction | fill-mode | play-state | name */
     filter: blur(0px);
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.828);
   }
+}
+
+/* BATTLE SCENES */
+#battlescreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#battleVS {
+  position: absolute;
+  top: 5vh;
+  margin: 0px auto;
+  font-size: calc(2rem + 3vh);
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.828);
+  color: whitesmoke;
+}
+
+#playerDetails,
+#opponentDetails {
+  max-width: 45vw;
+}
+
+#playerDetails img,
+#opponentDetails img {
+  position: absolute;
+  bottom: 0vw;
+  width: 15vw;
+  -webkit-filter: drop-shadow(2px 1px 10px yellow)
+    drop-shadow(0px 0px 10px yellow);
+  filter: drop-shadow(0px 0px 10px yellow) drop-shadow(0px 0px 0 yellow);
+}
+
+#playerDetails img {
+  left: 5vw;
+}
+
+#opponentDetails img {
+  right: 5vw;
+}
+
+#battleLabels {
+  position: absolute;
+  bottom: 0vw;
+  width: 15vw;
+  color: whitesmoke;
+  left: 40vw;
+}
+
+#playerDetails ul,
+#opponentDetails ul {
+  position: absolute;
+  bottom: 0vw;
+  width: 15vw;
+  color: whitesmoke;
+}
+
+#playerDetails ul {
+  left: 22vw;
+  text-align: right;
+}
+
+#opponentDetails ul {
+  right: 22vw;
+  text-align: left;
 }
