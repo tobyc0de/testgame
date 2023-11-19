@@ -8,6 +8,7 @@ export default function Normal({
   setCurrentStepData,
 }) {
   const [clickableObjectText, setClickableObjectText] = useState("");
+  const [loadMainText, setLoadMainText] = useState("");
   useEffect(() => {
     setCurrentStepData(storyline.find((scene) => scene.id === currentStep));
   }, [currentStep, currentStepData]);
@@ -17,9 +18,10 @@ export default function Normal({
         id="background"
         src={`/img/backgrounds/${currentStep}.webp`}
         alt="background"
+        onMouseEnter={() => setLoadMainText("maintext")}
       />
 
-      <div className={`maintext text${currentStepData.textPosition}`}>
+      <div id={loadMainText} className={`text${currentStepData.textPosition}`}>
         {currentStepData.text} <br />
       </div>
       <div className="clickableObjectTextContainer">
@@ -42,7 +44,9 @@ export default function Normal({
               key={`object${i}`}
               id={`object${i}`}
               onClick={() => (
-                setCurrentStep(object.target), setClickableObjectText("")
+                setCurrentStep(object.target),
+                setClickableObjectText(""),
+                setLoadMainText("")
               )}
               onMouseEnter={() => setClickableObjectText(object.text)}
               onMouseLeave={() => setClickableObjectText("")}
