@@ -61,7 +61,7 @@
     "id": 2,
     "type": "normal",
     "name": "appartment",
-    "text": "I don't like this place, although the view is nice.",
+    "text": "I like it here. A place to relax, away from the noise. And the smells. And the people.",
     "textPosition": "topcenter",
     "clickableObjects": [
       {
