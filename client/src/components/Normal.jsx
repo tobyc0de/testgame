@@ -49,9 +49,7 @@ export default function Normal({
                 setClickableObjectText(""),
                 setLoadMainText("")
               )}
-              onMouseEnter={
-                isMobile ? () => false : setClickableObjectText(object.text)
-              }
+              onMouseEnter={() => setClickableObjectText(object.text)}
               onMouseLeave={() => setClickableObjectText("")}
             >
               <img
