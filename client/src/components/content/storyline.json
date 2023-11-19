@@ -1,0 +1,138 @@
+[
+  {
+    "id": 0,
+    "type": "normal",
+    "name": "intro",
+    "text": "This is my city. I am Batman.",
+    "textPosition": "bottomleft",
+    "clickableObjects": [
+      {
+        "name": "Moon",
+        "text": "Should I go to the moon?",
+        "target": 1,
+        "positionX": 25.5,
+        "positionY": 20.8,
+        "width": 6.8,
+        "height": 10.4,
+        "image": "0_0.webp"
+      },
+      {
+        "name": "Appartment",
+        "text": "Should I go home to my appartment?",
+        "target": 2,
+        "positionX": 85.9,
+        "positionY": 55.4,
+        "width": 3.4,
+        "height": 20.0,
+        "image": "0_12.webp"
+      },
+      {
+        "name": "fightclub",
+        "text": "Should I go to the fightclub?",
+        "target": 3,
+        "positionX": 55,
+        "positionY": 76.53,
+        "width": 13.5,
+        "height": 17.127,
+        "image": "0_3.webp"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "type": "normal",
+    "name": "moon",
+    "text": "Pretty nice here, as far as moons go...",
+    "textPosition": "bottomcenter",
+    "clickableObjects": [
+      {
+        "name": "Planet",
+        "text": "Should I go back planetside?",
+        "target": 0,
+        "positionX": 19,
+        "positionY": 13,
+        "width": 30,
+        "height": 22,
+        "image": "1_1.webp"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "type": "normal",
+    "name": "appartment",
+    "text": "I don't like this place, although the view is nice.",
+    "textPosition": "topcenter",
+    "clickableObjects": [
+      {
+        "name": "computer",
+        "text": "Should I browse the hypernet?",
+        "target": 0,
+        "positionX": 15.5,
+        "positionY": 51.5,
+        "width": 9,
+        "height": 11,
+        "image": "2_1.webp"
+      },
+      {
+        "name": "tower",
+        "text": "Should I go back to Yokotami Tower?",
+        "target": 0,
+        "positionX": 33.6,
+        "positionY": 20.1,
+        "width": 4.09,
+        "height": 31.1,
+        "image": "2_2.webp"
+      }
+    ]
+  },
+
+  {
+    "id": 3,
+    "type": "normal",
+    "name": "fightclub",
+    "text": "And the crowd goes wild...",
+    "textPosition": "bottomright",
+    "clickableObjects": [
+      {
+        "name": "vlad",
+        "text": "Should I talk to Vlad the owner?",
+        "target": 0,
+        "positionX": 0,
+        "positionY": 48,
+        "width": 10.7,
+        "height": 45,
+        "image": "3_1.webp"
+      },
+      {
+        "name": "ring",
+        "text": "Should I watch the fight?",
+        "target": 0,
+        "positionX": 44.2,
+        "positionY": 37.7,
+        "width": 10.6,
+        "height": 30.65,
+        "image": "3_2.webp"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "type": "battle",
+    "opponent": "BlablaOpponent",
+    "opponentAttributes": {
+      "health": 10,
+      "strength": 5,
+      "dexterity": 3,
+      "intelligence": 8,
+      "friendliness": 4
+    },
+    "opponentImage": "Blablaopponent.webp",
+    "nextStep": 69
+  },
+  {
+    "id": 69,
+    "type": "victory",
+    "text": "you won!!!"
+  }
+]

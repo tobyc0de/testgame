@@ -1,0 +1,11 @@
+{
+  "id": 0,
+  "name": "defaultDude",
+  "attributes": {
+    "health": 10,
+    "strength": 3,
+    "dexterity": 5,
+    "intelligence": 2,
+    "charisma": 4
+  }
+}
