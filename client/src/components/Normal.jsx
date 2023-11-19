@@ -18,7 +18,7 @@ export default function Normal({
         id="background"
         src={`/img/backgrounds/${currentStep}.webp`}
         alt="background"
-        onMouseEnter={() => setLoadMainText("maintext")}
+        onLoad={() => setLoadMainText("maintext")}
       />
 
       <div id={loadMainText} className={`text${currentStepData.textPosition}`}>
