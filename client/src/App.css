@@ -75,6 +75,7 @@ body {
 .clickableObject {
   text-align: center;
   color: white;
+  z-index: 1;
 }
 
 .clickableObject:hover {
@@ -97,6 +98,7 @@ body {
   overflow: hidden;
   font-size: calc(1rem + 2vh);
   color: rgba(255, 255, 255, 0);
+  z-index: 3000;
 }
 
 #maintext0 {
