@@ -21,7 +21,7 @@ export default function Battle({
       setCurrentStep(currentStepData.nextStep);
     } else if (player.attributes.health <= 0) {
       console.log("lose!");
-      setCurrentStep(0);
+      setCurrentStep(404);
     }
   }, [opponentAttributes, player]);
 

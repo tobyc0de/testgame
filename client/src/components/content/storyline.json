@@ -160,16 +160,44 @@
       "friendliness": 4
     },
     "opponentImage": "4_1.webp",
-    "nextStep": 0
+    "nextStep": 69
   },
   {
     "id": 69,
-    "type": "victory",
-    "text": "you won!!!"
+    "type": "normal",
+    "name": "victory",
+    "text": ["You won!", "get over it..."],
+    "textPosition": "bottomcenter",
+    "clickableObjects": [
+      {
+        "name": "back",
+        "text": "maybe i should leave",
+        "target": 0,
+        "positionX": 90,
+        "positionY": 90,
+        "width": 8,
+        "height": 10,
+        "image": "3_3.webp"
+      }
+    ]
   },
   {
     "id": 404,
-    "type": "gameover",
-    "text": "you lost. get over it."
+    "type": "normal",
+    "name": "gameover",
+    "text": ["You lost!", "get over it..."],
+    "textPosition": "bottomcenter",
+    "clickableObjects": [
+      {
+        "name": "back",
+        "text": "maybe i should leave",
+        "target": 0,
+        "positionX": 90,
+        "positionY": 90,
+        "width": 8,
+        "height": 10,
+        "image": "3_3.webp"
+      }
+    ]
   }
 ]

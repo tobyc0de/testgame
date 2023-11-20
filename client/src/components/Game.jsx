@@ -37,33 +37,12 @@ export default function Game() {
           />
         </>
       )}
-
       {currentStepData.type === "battle" && (
         <Battle
           currentStep={currentStep}
           setCurrentStep={setCurrentStep}
           player={player}
           setPlayer={setPlayer}
-          currentStepData={currentStepData}
-          setCurrentStepData={setCurrentStepData}
-        />
-      )}
-      {currentStepData.type === "victory" && (
-        <Victory
-          currentStep={currentStep}
-          setCurrentStep={setCurrentStep}
-          player={player}
-          setplayer={setPlayer}
-          currentStepData={currentStepData}
-          setCurrentStepData={setCurrentStepData}
-        />
-      )}
-      {currentStepData.type === "gameover" && (
-        <Gameover
-          currentStep={currentStep}
-          setCurrentStep={setCurrentStep}
-          player={player}
-          setplayer={setPlayer}
           currentStepData={currentStepData}
           setCurrentStepData={setCurrentStepData}
         />
