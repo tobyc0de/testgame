@@ -24,7 +24,7 @@ export default function Normal({
       />
       {currentStepData.text.map((textPart, i) => (
         <div
-          id={`mainText${i}`}
+          id={`${loadMainText}${i}`}
           className={`${loadMainText} text${currentStepData.textPosition}`}
         >
           {currentStepData.text[i]} <br />
