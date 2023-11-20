@@ -118,7 +118,7 @@
     "clickableObjects": [
       {
         "name": "vlad",
-        "text": "Should I talk to Vlad the owner?",
+        "text": "Should I talk to Vlad the owner? He'll probably throw me out...",
         "target": 0,
         "positionX": 0,
         "positionY": 48,
