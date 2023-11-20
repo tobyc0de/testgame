@@ -87,6 +87,8 @@ body {
 .textmiddleright,
 .textmiddlecenter {
   position: absolute;
+  color: whitesmoke;
+  font-size: calc(1rem + 2vh);
 }
 
 .textbottomleft {
