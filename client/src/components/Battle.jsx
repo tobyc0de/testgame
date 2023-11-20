@@ -8,7 +8,9 @@ export default function Battle({
   setPlayer,
 }) {
   const [isTurn, setIsTurn] = useState(true);
-  const [actionDescription, setActionDescription] = useState(["lessgo mofo"]);
+  const [actionDescription, setActionDescription] = useState([
+    "why did I do this",
+  ]);
   const [opponentAttributes, setOpponentsAttributes] = useState(
     currentStepData.opponentAttributes
   );
@@ -90,9 +92,14 @@ export default function Battle({
     } // DODGE
     else if (action === "dodge") {
       setActionDescription([...actionDescription, "you tried to dodge!"]);
-      setOpponentsAttributes({
-        ...opponentAttributes,
-        health: opponentAttributes.health - player.attributes.strength,
+      setPlayer({
+        ...player,
+        attributes: {
+          ...player.attributes,
+          health:
+            player.attributes.health -
+            getRandomInt(opponentAttributes.strength),
+        },
       });
     } // COUNTERATTACK
     else if (action === "counterattack") {
@@ -100,9 +107,18 @@ export default function Battle({
         ...actionDescription,
         "you tried to counter attack!",
       ]);
+      setPlayer({
+        ...player,
+        attributes: {
+          ...player.attributes,
+          health: player.attributes.health - opponentAttributes.strength,
+        },
+      });
       setOpponentsAttributes({
         ...opponentAttributes,
-        health: opponentAttributes.health - player.attributes.strength,
+        health:
+          opponentAttributes.health -
+          getRandomInt(player.attributes.strength) / 2,
       });
     } // COUNTERLICK
     else if (action === "counterlick") {
@@ -136,19 +152,22 @@ export default function Battle({
         />
 
         <ul id="battleLabels">
-          <li>
-            {player.attributes.health} Health {opponentAttributes.health}
+          <li class="battleLabel">
+            <span>{player.attributes.health}</span> <span>Health</span>{" "}
+            <span>{opponentAttributes.health}</span>
           </li>
-          <li>
-            {player.attributes.strength} Strength {opponentAttributes.strength}
+          <li class="battleLabel">
+            <span>{player.attributes.strength}</span> <span>Strength</span>{" "}
+            <span>{opponentAttributes.strength}</span>
           </li>
-          <li>
-            {player.attributes.dexterity} Dexterity{" "}
-            {opponentAttributes.dexterity}
+          <li class="battleLabel">
+            <span>{player.attributes.dexterity}</span> <span>Dexterity </span>
+            <span>{opponentAttributes.dexterity}</span>
           </li>
-          <li>
-            {player.attributes.intelligence} Intelligence{" "}
-            {opponentAttributes.intelligence}
+          <li class="battleLabel">
+            <span>{player.attributes.intelligence}</span>{" "}
+            <span>Intelligence </span>
+            <span>{opponentAttributes.intelligence}</span>
           </li>
         </ul>
       </div>
@@ -164,7 +183,7 @@ export default function Battle({
         <div id="buttonsdiv">
           <div onClick={() => handleClick("block")}>Block</div>
           <div onClick={() => handleClick("dodge")}>Dodge</div>
-          <div onClick={() => handleClick("counter")}>Counter-Attack</div>
+          <div onClick={() => handleClick("counterattack")}>Counter-Attack</div>
           <div onClick={() => handleClick("counterlick")}>Lick</div>
         </div>
       )}

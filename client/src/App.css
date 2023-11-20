@@ -12,6 +12,41 @@ body {
   height: 100vh;
 }
 
+@keyframes fadeintext {
+  0%,
+  10%,
+  100% {
+    color: rgba(255, 255, 255, 0);
+    filter: blur(4px);
+  }
+  20%,
+  90% {
+    color: rgb(255, 255, 255);
+    filter: blur(0px);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.828);
+  }
+}
+
+@keyframes fadeintextandhide {
+  0%,
+  10% {
+    color: rgba(255, 255, 255, 0);
+    filter: blur(4px);
+  }
+  20%,
+  90% {
+    color: rgb(255, 255, 255);
+    filter: blur(0px);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.828);
+    display: block;
+  }
+  100% {
+    color: rgba(255, 255, 255, 0);
+    filter: blur(4px);
+    display: none;
+  }
+}
+
 /* NORMAL SCENES */
 
 .clickableObject {
@@ -92,21 +127,6 @@ iteration-count | direction | fill-mode | play-state | name */
   font-size: calc(1rem + 2vh);
 }
 
-@keyframes fadeintext {
-  0%,
-  10%,
-  100% {
-    color: rgba(255, 255, 255, 0);
-    filter: blur(4px);
-  }
-  20%,
-  90% {
-    color: rgb(255, 255, 255);
-    filter: blur(0px);
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.828);
-  }
-}
-
 /* BATTLE SCENES */
 #battlescreen {
   display: flex;
@@ -123,6 +143,44 @@ iteration-count | direction | fill-mode | play-state | name */
   color: whitesmoke;
 }
 
+#buttonsdiv {
+  position: absolute;
+  top: 20vh;
+  font-size: calc(1rem + 2vh);
+  color: whitesmoke;
+  text-align: center;
+  display: flex;
+}
+
+#buttonsdiv div {
+  padding: 0.5vw 1vw;
+  border: 1px solid whitesmoke;
+  border-radius: 10%;
+  margin: 0.5vw;
+}
+
+#buttonsdiv div:hover {
+  background-color: whitesmoke;
+  color: rgb(60, 60, 60);
+  cursor: pointer;
+}
+
+#actiondescription {
+  position: absolute;
+  top: 32vh;
+  font-size: calc(1rem + 2vh);
+  color: whitesmoke;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#actiondescription > p {
+  /* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+  animation: 3s ease-out 0s 1 normal forwards running fadeintextandhide;
+}
+
 #playerDetails,
 #opponentDetails {
   max-width: 45vw;
@@ -131,35 +189,40 @@ iteration-count | direction | fill-mode | play-state | name */
 #playerDetails img,
 #opponentDetails img {
   position: absolute;
-  bottom: 0vw;
-  width: 15vw;
+  bottom: -3vw;
+  width: 30vw;
+  max-height: 90vh;
   -webkit-filter: drop-shadow(2px 1px 10px yellow)
     drop-shadow(0px 0px 10px yellow);
   filter: drop-shadow(0px 0px 10px yellow) drop-shadow(0px 0px 0 yellow);
 }
 
 #playerDetails img {
-  left: 5vw;
+  left: -5vw;
+  transform: rotate(20deg);
 }
 
 #opponentDetails img {
-  right: 5vw;
+  right: -5vw;
+  transform: rotate(-20deg);
 }
 
 #battleLabels {
   position: absolute;
-  bottom: 0vw;
-  width: 15vw;
+  bottom: 2vw;
+  width: 20vw;
   color: whitesmoke;
   left: 40vw;
+  font-size: calc(1rem + 3vh);
 }
 
-#playerDetails ul,
-#opponentDetails ul {
-  position: absolute;
-  bottom: 0vw;
-  width: 15vw;
-  color: whitesmoke;
+.battleLabel {
+  display: flex;
+  justify-content: space-between;
+}
+
+#battleLabels {
+  list-style: none;
 }
 
 #playerDetails ul {

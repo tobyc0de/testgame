@@ -3,7 +3,7 @@
     "id": 0,
     "type": "normal",
     "name": "intro",
-    "text": "This is my city. I am Batman.",
+    "text": "This is my city. I am Batman. Okay I'm not Batman but it sounded cool in the moment.",
     "textPosition": "bottomleft",
     "clickableObjects": [
       {
