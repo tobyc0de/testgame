@@ -73,8 +73,8 @@
     "type": "normal",
     "name": "appartment",
     "text": [
-      "I like it here. A place to relax, away from the noise. And the smells. And the people.",
-      "Also, did I mention the people?"
+      "I like it here.", "A place to relax, away from the noise.", "And the smells." "And the people.",
+      "", "Also, did I mention the people?"
     ],
     "textPosition": "topcenter",
     "clickableObjects": [
