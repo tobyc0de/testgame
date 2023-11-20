@@ -2,16 +2,14 @@ import React, { useEffect, useState } from "react";
 import storyline from "./content/storyline.json";
 import Battle from "./Battle";
 import Normal from "./Normal";
-import Victory from "./Victory";
-import Gameover from "./Gameover";
+import useTimeout from "./useTimeOut";
 import defaultPlayer from "./content/defaultplayer.json";
 
 export default function Game() {
   const [currentStep, setCurrentStep] = useState(0);
-  const [currentStepData, setCurrentStepData] = useState(
-    storyline.find((scene) => scene.id === currentStep)
-  );
+  const [currentStepData, setCurrentStepData] = useState(999);
   const [player, setPlayer] = useState(defaultPlayer);
+  const [hasTimeElapsed, setHasTimeElapsed] = React.useState(false);
 
   useEffect(() => {
     setCurrentStepData(storyline.find((step) => step.id === currentStep));

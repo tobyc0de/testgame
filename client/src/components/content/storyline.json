@@ -17,7 +17,7 @@
       {
         "name": "Moon",
         "text": "Should I go to the moon?",
-        "target": 1,
+        "target": 999,
         "positionX": 25.5,
         "positionY": 20.8,
         "width": 6.8,
@@ -199,5 +199,13 @@
         "image": "3_3.webp"
       }
     ]
+  },
+  {
+    "id": 999,
+    "type": "normal",
+    "name": "blackscreenfade",
+    "text": [],
+    "textPosition": "bottomcenter",
+    "clickableObjects": []
   }
 ]
