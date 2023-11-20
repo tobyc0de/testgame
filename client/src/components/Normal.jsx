@@ -12,6 +12,7 @@ export default function Normal({
   const [loadMainText, setLoadMainText] = useState("");
   useEffect(() => {
     setCurrentStepData(storyline.find((scene) => scene.id === currentStep));
+    setLoadMainText("maintext");
   }, [currentStep, currentStepData]);
   return (
     <div id="normalscreen">
