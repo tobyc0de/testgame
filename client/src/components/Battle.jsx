@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import defaultPlayer from "./content/defaultplayer.json";
 
 export default function Battle({
   currentStep,
@@ -17,10 +18,12 @@ export default function Battle({
 
   useEffect(() => {
     if (opponentAttributes.health <= 0) {
-      console.log("win!");
+      setPlayer(defaultPlayer);
+      setOpponentsAttributes(currentStepData.opponentAttributes);
       setCurrentStep(currentStepData.nextStep);
     } else if (player.attributes.health <= 0) {
-      console.log("lose!");
+      setPlayer(defaultPlayer);
+      setOpponentsAttributes(currentStepData.opponentAttributes);
       setCurrentStep(404);
     }
   }, [opponentAttributes, player]);
