@@ -47,6 +47,24 @@ body {
   }
 }
 
+@keyframes pulse {
+  0%,
+  70% {
+    -webkit-filter: none;
+    filter: none;
+  }
+
+  80% {
+    -webkit-filter: drop-shadow(2px 1px 1px yellow)
+      drop-shadow(0px 0px 10px yellow);
+    filter: drop-shadow(0px 0px 1px yellow) drop-shadow(0px 0px 0 yellow);
+  }
+  100% {
+    -webkit-filter: none;
+    filter: none;
+  }
+}
+
 /* NORMAL SCENES */
 
 .clickableObject {
@@ -65,16 +83,60 @@ body {
 .clickableObjectImage {
   height: inherit;
   width: inherit;
+  animation: 15s ease-out 5s infinite normal both running pulse;
 }
 
-#maintext {
+.maintext {
   padding: 1vh 2vh;
-  color: whitesmoke;
   height: min-content;
   overflow: hidden;
   backdrop-filter: grayscale;
   font-size: calc(1rem + 2vh);
-  animation: 10s ease-out 0s 1 normal forwards running fadeintext;
+}
+
+#mainText0 {
+  animation: 5s ease-out 0s 1 normal forwards running fadeintext;
+  color: rgba(255, 255, 255, 0);
+}
+
+#mainText1 {
+  animation: 5s ease-out 4s 1 normal forwards running fadeintext;
+  color: rgba(255, 255, 255, 0);
+}
+
+#mainText2 {
+  animation: 5s ease-out 8s 1 normal forwards running fadeintext;
+  color: rgba(255, 255, 255, 0);
+}
+
+#mainText3 {
+  animation: 5s ease-out 12s 1 normal forwards running fadeintext;
+  color: rgba(255, 255, 255, 0);
+}
+
+#mainText4 {
+  animation: 5s ease-out 16s 1 normal forwards running fadeintext;
+  color: rgba(255, 255, 255, 0);
+}
+
+#mainText5 {
+  animation: 5s ease-out 20s 1 normal forwards running fadeintext;
+  color: rgba(255, 255, 255, 0);
+}
+
+#mainText6 {
+  animation: 5s ease-out 24s 1 normal forwards running fadeintext;
+  color: rgba(255, 255, 255, 0);
+}
+
+#mainText7 {
+  animation: 5s ease-out 28s 1 normal forwards running fadeintext;
+  color: rgba(255, 255, 255, 0);
+}
+
+#mainText8 {
+  animation: 5s ease-out 32s 1 normal forwards running fadeintext;
+  color: rgba(255, 255, 255, 0);
 }
 
 .textbottomleft,
@@ -88,7 +150,6 @@ body {
 .textmiddlecenter {
   position: absolute;
   padding: 1vh 2vh;
-  color: whitesmoke;
   height: min-content;
   overflow: hidden;
   backdrop-filter: grayscale;

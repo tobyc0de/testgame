@@ -3,7 +3,15 @@
     "id": 0,
     "type": "normal",
     "name": "intro",
-    "text": "This is my city. I am Batman. Okay I'm not Batman but it sounded cool in the moment.",
+    "text": [
+      "This is my city. I am Batman.",
+      "Okay I'm not Batman but it sounded cool in the moment.",
+      "",
+      "",
+      "i should probably look around",
+      "",
+      "see if i find something to do..."
+    ],
     "textPosition": "bottomleft",
     "clickableObjects": [
       {
@@ -42,7 +50,10 @@
     "id": 1,
     "type": "normal",
     "name": "moon",
-    "text": "Pretty nice here, as far as moons go...",
+    "text": [
+      "Pretty nice here, as far as moons go...",
+      "this scene needs more content..."
+    ],
     "textPosition": "bottomcenter",
     "clickableObjects": [
       {
@@ -61,7 +72,10 @@
     "id": 2,
     "type": "normal",
     "name": "appartment",
-    "text": "I like it here. A place to relax, away from the noise. And the smells. And the people.",
+    "text": [
+      "I like it here. A place to relax, away from the noise. And the smells. And the people.",
+      "Also, did I mention the people?"
+    ],
     "textPosition": "topcenter",
     "clickableObjects": [
       {
@@ -91,7 +105,10 @@
     "id": 3,
     "type": "normal",
     "name": "fightclub",
-    "text": "And the crowd goes wild...",
+    "text": [
+      "And the crowd goes wild...",
+      "it smells like nicotine and testosterone."
+    ],
     "textPosition": "bottomright",
     "clickableObjects": [
       {

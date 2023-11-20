@@ -22,10 +22,15 @@ export default function Normal({
         alt="background"
         onMouseEnter={() => setLoadMainText("maintext")}
       />
+      {currentStepData.text.map((textPart, i) => (
+        <div
+          id={`mainText${i}`}
+          className={`${loadMainText} text${currentStepData.textPosition}`}
+        >
+          {currentStepData.text[i]} <br />
+        </div>
+      ))}
 
-      <div id={loadMainText} className={`text${currentStepData.textPosition}`}>
-        {currentStepData.text} <br />
-      </div>
       <div className="clickableObjectTextContainer">
         {clickableObjectText && (
           <div className="clickableObjectText">{clickableObjectText}</div>
