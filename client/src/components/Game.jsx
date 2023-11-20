@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import storyline from "./content/storyline.json";
 import Battle from "./Battle";
 import Normal from "./Normal";
+import Victory from "./Victory";
+import Gameover from "./Gameover";
 import defaultPlayer from "./content/defaultplayer.json";
 
 export default function Game() {
@@ -46,8 +48,18 @@ export default function Game() {
           setCurrentStepData={setCurrentStepData}
         />
       )}
-      {currentStepData.type === "Victory" && (
+      {currentStepData.type === "victory" && (
         <Victory
+          currentStep={currentStep}
+          setCurrentStep={setCurrentStep}
+          player={player}
+          setplayer={setPlayer}
+          currentStepData={currentStepData}
+          setCurrentStepData={setCurrentStepData}
+        />
+      )}
+      {currentStepData.type === "gameover" && (
+        <Gameover
           currentStep={currentStep}
           setCurrentStep={setCurrentStep}
           player={player}

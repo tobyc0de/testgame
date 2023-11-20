@@ -135,6 +135,16 @@
         "width": 10.6,
         "height": 30.65,
         "image": "3_2.webp"
+      },
+      {
+        "name": "back",
+        "text": "maybe i should leave",
+        "target": 0,
+        "positionX": 90,
+        "positionY": 90,
+        "width": 8,
+        "height": 10,
+        "image": "3_3.webp"
       }
     ]
   },
@@ -150,11 +160,16 @@
       "friendliness": 4
     },
     "opponentImage": "4_1.webp",
-    "nextStep": 69
+    "nextStep": 0
   },
   {
     "id": 69,
     "type": "victory",
     "text": "you won!!!"
+  },
+  {
+    "id": 404,
+    "type": "gameover",
+    "text": "you lost. get over it."
   }
 ]

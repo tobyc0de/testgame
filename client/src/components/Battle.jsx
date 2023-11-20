@@ -17,9 +17,11 @@ export default function Battle({
 
   useEffect(() => {
     if (opponentAttributes.health <= 0) {
+      console.log("win!");
       setCurrentStep(currentStepData.nextStep);
     } else if (player.attributes.health <= 0) {
-      setCurrentStep(404);
+      console.log("lose!");
+      setCurrentStep(0);
     }
   }, [opponentAttributes, player]);
 
@@ -152,19 +154,19 @@ export default function Battle({
         />
 
         <ul id="battleLabels">
-          <li class="battleLabel">
+          <li className="battleLabel">
             <span>{player.attributes.health}</span> <span>Health</span>{" "}
             <span>{opponentAttributes.health}</span>
           </li>
-          <li class="battleLabel">
+          <li className="battleLabel">
             <span>{player.attributes.strength}</span> <span>Strength</span>{" "}
             <span>{opponentAttributes.strength}</span>
           </li>
-          <li class="battleLabel">
+          <li className="battleLabel">
             <span>{player.attributes.dexterity}</span> <span>Dexterity </span>
             <span>{opponentAttributes.dexterity}</span>
           </li>
-          <li class="battleLabel">
+          <li className="battleLabel">
             <span>{player.attributes.intelligence}</span>{" "}
             <span>Intelligence </span>
             <span>{opponentAttributes.intelligence}</span>
