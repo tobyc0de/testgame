@@ -148,12 +148,17 @@ export default function Battle({
       </div>
 
       <div id="playerDetails">
-        <img src="/img/opponents/you.webp" alt="you" />
+        <img
+          src="/img/opponents/you.webp"
+          alt="you"
+          className={`playerturnhighlight${isTurn}`}
+        />
       </div>
       <div id="opponentDetails">
         <img
           src={`/img/opponents/${currentStepData.opponentImage}`}
           alt="the other guy"
+          className={`playerturnhighlight${isTurn}`}
         />
 
         <ul id="battleLabels">

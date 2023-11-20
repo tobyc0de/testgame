@@ -276,6 +276,18 @@ iteration-count | direction | fill-mode | play-state | name */
   filter: drop-shadow(0px 0px 10px yellow) drop-shadow(0px 0px 0 yellow);
 }
 
+#playerDetails > .playerturnhighlighttrue {
+  -webkit-filter: drop-shadow(2px 1px 10px yellow)
+    drop-shadow(0px 0px 20px yellow);
+  filter: drop-shadow(0px 0px 100px yellow) drop-shadow(0px 0px 0 yellow);
+}
+
+#opponentDetails > .playerturnhighlightfalse {
+  -webkit-filter: drop-shadow(2px 1px 10px yellow)
+    drop-shadow(0px 0px 20px yellow);
+  filter: drop-shadow(0px 0px 100px yellow) drop-shadow(0px 0px 0 yellow);
+}
+
 #playerDetails img {
   left: -5vw;
   transform: rotate(20deg);
